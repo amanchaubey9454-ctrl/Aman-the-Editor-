@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aman the Editor — video editing portfolio for reels, podcast clips, cinematic edits and promotional videos.">
+<title>Aman the Editor | Video Editing Portfolio</title>
+<style>
+:root{--bg:#090909;--panel:#141414;--muted:#aaa;--text:#f5f5f5;--accent:#ff7029;--line:#292929}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0;border-bottom:1px solid var(--line);gap:20px}
+.logo{font-weight:900;letter-spacing:-1px;font-size:1.2rem}.logo span,.accent{color:var(--accent)}
+.navlinks{display:flex;gap:24px;color:#ccc;font-size:.9rem}.navlinks a:hover{color:var(--accent)}
+.hero{padding:92px 0 72px;display:grid;grid-template-columns:1.15fr .85fr;gap:46px;align-items:center}
+.kicker{color:var(--accent);font-size:.75rem;font-weight:800;letter-spacing:3px;text-transform:uppercase}
+h1{font-size:clamp(2.8rem,6.5vw,5.8rem);line-height:.98;letter-spacing:-.065em;margin:18px 0 24px;max-width:760px}
+.lead{color:#bcbcbc;font-size:1.1rem;max-width:560px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-block;padding:12px 18px;border-radius:5px;font-weight:800;font-size:.88rem;border:1px solid #414141}.primary{background:var(--accent);border-color:var(--accent);color:#111}.btn:hover{transform:translateY(-2px)}
+.hero-art{min-height:370px;border:1px solid #303030;border-radius:12px;background:radial-gradient(ellipse at 70% 20%,#59301c 0,transparent 36%),linear-gradient(145deg,#252525,#101010 55%,#1e130e);padding:22px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.hero-art:before{content:"";position:absolute;width:300px;height:300px;border:1px solid #ffffff20;border-radius:50%;right:-75px;top:40px;box-shadow:0 0 0 30px #ffffff05,0 0 0 60px #ffffff04}
+.frame{position:relative;z-index:1;border:1px solid #ffffff2b;border-radius:8px;padding:15px;background:#00000055;backdrop-filter:blur(3px)}
+.frame small{color:#bbb;letter-spacing:2px}.frame strong{display:block;font-size:1.8rem;line-height:1.1;margin-top:8px}
+.timeline{height:8px;display:flex;gap:4px;margin-top:20px}.timeline i{display:block;border-radius:2px;background:#ff7029;height:100%}.timeline i:nth-child(1){width:22%}.timeline i:nth-child(2){width:13%;background:#e3b29b}.timeline i:nth-child(3){width:30%}.timeline i:nth-child(4){width:17%;background:#aaa}.timeline i:nth-child(5){width:18%}
+.section{padding:64px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}
+h2{font-size:clamp(1.8rem,4vw,3rem);letter-spacing:-.04em;line-height:1.1;margin:8px 0}.sub{color:var(--muted);max-width:600px;margin:0}
+.services{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.service{padding:20px;border:1px solid var(--line);border-radius:8px;background:#101010}.num{color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:2px}.service h3{font-size:1rem;margin:16px 0 8px}.service p{font-size:.88rem;color:var(--muted);margin:0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}.about-card{padding:25px;border-radius:9px;background:linear-gradient(145deg,#191919,#101010);border:1px solid var(--line)}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.chip{border:1px solid #373737;padding:7px 10px;border-radius:99px;font-size:.8rem;color:#ddd}
+.drive-feature{position:relative;overflow:hidden;text-align:center;padding:clamp(28px,6vw,68px) 24px;border:1px solid #55311f;border-radius:14px;background:radial-gradient(ellipse at 50% 0%,#5b2d18 0,transparent 52%),linear-gradient(145deg,#1c1714,#0e0e0e 68%);}
+.drive-feature:before{content:"";position:absolute;width:270px;height:270px;border:1px solid #ffffff14;border-radius:50%;top:-145px;left:calc(50% - 135px);box-shadow:0 0 0 24px #ffffff04,0 0 0 48px #ffffff03;pointer-events:none}
+.drive-feature>*{position:relative}.drive-icon{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;margin:0 auto 22px;background:var(--accent);color:#111;font-size:1.25rem;padding-left:3px;box-shadow:0 0 36px #ff702933}.drive-feature .sub{margin:0 auto;max-width:640px}.drive-cta{margin-top:26px;padding:15px 23px}.drive-caption{margin:17px 0 0;color:#888;font-size:.78rem;letter-spacing:.04em}
+.contact{padding:44px;border-radius:12px;background:linear-gradient(115deg,#22150f,#111 65%);border:1px solid #55311f;display:flex;justify-content:space-between;align-items:center;gap:30px}
+footer{padding:28px 0;color:#888;font-size:.8rem;display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line)}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding:60px 0 45px;gap:28px}.hero-art{min-height:260px}.navlinks{gap:12px;font-size:.8rem}.about-grid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,minmax(0,1fr))}.section{padding:46px 0}.contact{padding:26px;display:block}.contact .btn{margin-top:15px}}
+@media(max-width:420px){.navlinks a:nth-child(2){display:none}.services{grid-template-columns:1fr 1fr}.hero-art{min-height:230px}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <nav><a class="logo" href="#top">AMAN<span>.</span> THE EDITOR</a><div class="navlinks"><a href="#services">Services</a><a href="#about">About</a><a href="#contact">Contact</a><a href="https://drive.google.com/drive/folders/1gR6gdKC63dBLHP1WfbXjP8nVj3XH6tuz?usp=sharing" target="_blank" rel="noopener">Portfolio ↗</a></div></nav>
+</header>
+<main id="top">
+<section class="hero wrap">
+  <div><div class="kicker">Independent Video Editor</div><h1>MAKING EVERY<br><span class="accent">FRAME</span> MATTER.</h1>
+  <p class="lead">I turn raw footage into engaging visual stories — from scroll-stopping short-form edits to cinematic videos and promotional content.</p>
+  <div class="actions"><a class="btn primary" href="https://drive.google.com/drive/folders/1gR6gdKC63dBLHP1WfbXjP8nVj3XH6tuz?usp=sharing" target="_blank" rel="noopener">EXPLORE MY EDITS ↗</a><a class="btn" href="#contact">LET'S WORK TOGETHER ↗</a></div></div>
+  <div class="hero-art"><div class="frame"><small>CREATIVE CUTS / VISUAL STORIES</small><strong>Story first.<br>Every frame counts.</strong><div class="timeline"><i></i><i></i><i></i><i></i><i></i></div></div><div style="position:relative;z-index:1;color:#bbb;font-size:.75rem;letter-spacing:2px">REELS · PODCASTS · CINEMATIC · PROMO</div></div>
+</section>
+<section class="section"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">What I bring</div><h2>Editing with intention.</h2></div><p class="sub">Clean pacing, thoughtful music choices, strong visual rhythm and edits built around the message.</p></div>
+  <div class="services" id="services">
+    <article class="service"><div class="num">01 / SHORT-FORM</div><h3>Reels & Shorts</h3><p>Fast-paced edits, hooks, captions and rhythm designed for vertical viewing.</p></article>
+    <article class="service"><div class="num">02 / STORY</div><h3>Podcast Clips</h3><p>Focused clips with clean cuts, readable subtitles and engaging pacing.</p></article>
+    <article class="service"><div class="num">03 / CINEMA</div><h3>Cinematic Edits</h3><p>Music-led storytelling, mood, transitions and color-conscious visuals.</p></article>
+    <article class="service"><div class="num">04 / PROMO</div><h3>Promotional Videos</h3><p>Concise edits for creators, products, events and brand messages.</p></article>
+  </div>
+</div></section>
+<section class="section" id="portfolio"><div class="wrap">
+  <div class="drive-feature">
+    <div class="drive-icon" aria-hidden="true">▶</div>
+    <div class="kicker">The complete collection</div>
+    <h2>See the edits. Feel the story.</h2>
+    <p class="sub">Explore my video editing portfolio in one place — from cinematic cuts and dialogue reels to social-first edits and promotional videos. Open the collection to watch the work at your own pace.</p>
+    <a class="btn primary drive-cta" href="https://drive.google.com/drive/folders/1gR6gdKC63dBLHP1WfbXjP8nVj3XH6tuz?usp=sharing" target="_blank" rel="noopener">EXPLORE THE FULL PORTFOLIO ↗</a>
+    <p class="drive-caption">Selected work · Multiple editing styles · Updated with new projects</p>
+  </div>
+</div></section>
+<section class="section" id="about"><div class="wrap about-grid">
+  <div><div class="kicker">Behind the timeline</div><h2>Hi, I'm Aman.</h2><p class="sub">I'm a video editor building visual stories through thoughtful cuts, music, pacing and detail. I enjoy working across different formats and adapting each edit to its purpose and audience.</p><p class="sub" style="margin-top:15px">My focus is simple: understand the idea, respect the story, and shape the footage into something worth watching.</p></div>
+  <div class="about-card"><div class="kicker">Creative toolkit</div><h3 style="margin:10px 0">Tools & strengths</h3><p class="sub">Editing tools and creative strengths.</p><div class="chips"><span class="chip">DaVinci Resolve</span><span class="chip">CapCut</span><span class="chip">Video Editing</span><span class="chip">Music Sync</span><span class="chip">Pacing</span><span class="chip">Captions</span><span class="chip">Storytelling</span><span class="chip">Color Grading</span><span class="chip">Sound Design</span><span class="chip">Social Content</span></div></div>
+</div></section>
+<section class="section" id="contact"><div class="wrap"><div class="contact"><div><div class="kicker">Have a project in mind?</div><h2>Let's make it memorable.</h2><p class="sub">Tell me what you're creating and what you want the audience to feel.</p></div><a class="btn primary" href="mailto:amanchaubey1009@gmail.com?subject=Video%20Editing%20Inquiry">EMAIL AMAN ↗</a></div><p class="sub" style="margin-top:14px;font-size:.85rem">Instagram: <a href="https://www.instagram.com/ibeing_i/" target="_blank" rel="noopener">@ibeing_i</a> · Email: <a href="mailto:amanchaubey1009@gmail.com">amanchaubey1009@gmail.com</a>.</p></div></section>
+</main>
+<footer class="wrap"><span>© <span id="year">2026</span> Aman the Editor</span><span>Made with intention. Cut with purpose.</span></footer>
+</body></html>
